@@ -19,7 +19,6 @@ const Scroll = ({ images, imageHeight, duration }) => {
     flex-wrap: nowrap;
     animation: ${scroll} ${duration}s linear infinite;
   `;
-  console.log(width);
   return (
     <div css={visibleArea} ref={ref}>
       {images.map(image => (
