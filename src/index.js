@@ -11,11 +11,8 @@ import netlify from './netlify.png';
 import ronin from './ronin.jpg';
 
 const images = [emotion, figma, gatsby, netlify, ronin];
-const listItems = images.map(listItem => (
-  <img src={listItem} alt="" key={listItem} style={{ height: 200 }} />
-));
 
-const Scroll = () => {
+const Scroll = ({ height }) => {
   const [ref, { width }] = useDimensions();
   const scroll = keyframes`
     0% {
@@ -30,10 +27,11 @@ const Scroll = () => {
     flex-wrap: nowrap;
     animation: ${scroll} 1s linear infinite;
   `;
-  console.log(width);
   return (
     <div css={visibleArea} ref={ref}>
-      {listItems}
+      {images.map(image => (
+        <img src={image} alt="" key={image} style={{ height: height }} />
+      ))}
     </div>
   );
 };
@@ -44,15 +42,10 @@ const InfiniteScrollImages = () => {
     flex-wrap: nowrap;
     overflow: hidden;
   `;
-  const kari = css`
-    width: 600px;
-  `;
   return (
-    <div css={kari}>
-      <div css={container}>
-        <Scroll />
-        <Scroll />
-      </div>
+    <div css={container}>
+      <Scroll height="200" />
+      <Scroll height="200" />
     </div>
   );
 };
