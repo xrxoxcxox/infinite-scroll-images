@@ -37,6 +37,7 @@
     "webpack-dev-server": "^3.9.0"
   },
   "dependencies": {
-    "@emotion/core": "^10.0.22"
+    "@emotion/core": "^10.0.22",
+    "react-use-dimensions": "^1.2.1"
   }
 }
