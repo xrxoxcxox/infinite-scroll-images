@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import MyComponent from '../../src';
+import InfiniteScrollImages from '../../src';
 
-const App = () => <MyComponent />;
+const App = () => <InfiniteScrollImages />;
 render(<App />, document.getElementById('root'));
