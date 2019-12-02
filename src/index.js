@@ -4,15 +4,7 @@ import useDimensions from 'react-use-dimensions';
 /** @jsx jsx */
 import { jsx, css, keyframes } from '@emotion/core';
 
-import emotion from './emotion.png';
-import figma from './figma.png';
-import gatsby from './gatsby.png';
-import netlify from './netlify.png';
-import ronin from './ronin.jpg';
-
-const images = [emotion, figma, gatsby, netlify, ronin];
-
-const Scroll = ({ height }) => {
+const Scroll = ({ images, imageHeight, duration }) => {
   const [ref, { width }] = useDimensions();
   const scroll = keyframes`
     0% {
@@ -25,18 +17,19 @@ const Scroll = ({ height }) => {
   const visibleArea = css`
     display: flex;
     flex-wrap: nowrap;
-    animation: ${scroll} 1s linear infinite;
+    animation: ${scroll} ${duration}s linear infinite;
   `;
+  console.log(width);
   return (
     <div css={visibleArea} ref={ref}>
       {images.map(image => (
-        <img src={image} alt="" key={image} style={{ height: height }} />
+        <img src={image} alt="" key={image} style={{ height: imageHeight }} />
       ))}
     </div>
   );
 };
 
-const InfiniteScrollImages = () => {
+const InfiniteScrollImages = props => {
   const container = css`
     display: flex;
     flex-wrap: nowrap;
@@ -44,8 +37,8 @@ const InfiniteScrollImages = () => {
   `;
   return (
     <div css={container}>
-      <Scroll height="200" />
-      <Scroll height="200" />
+      <Scroll {...props} />
+      <Scroll {...props} />
     </div>
   );
 };
