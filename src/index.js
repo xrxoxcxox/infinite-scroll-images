@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import useDimensions from 'react-use-dimensions';
 
 /** @jsx jsx */
-import { jsx, css, keyframes } from '@emotion/core';
+import { jsx, css, keyframes } from '@emotion/react';
 
 const Scroll = ({ images, imageHeight, duration }) => {
   const [ref, { width }] = useDimensions();
