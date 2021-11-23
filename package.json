@@ -26,6 +26,7 @@
     "@babel/core": "^7.16.0",
     "@babel/preset-env": "^7.16.4",
     "@babel/preset-react": "^7.16.0",
+    "@emotion/react": "^11.6.0",
     "babel-loader": "^8.2.3",
     "css-loader": "^6.5.1",
     "file-loader": "^5.0.2",
@@ -41,7 +42,6 @@
     "webpack-dev-server": "^4.5.0"
   },
   "dependencies": {
-    "@emotion/core": "^10.0.22",
     "react-use-dimensions": "^1.2.1"
   }
 }
