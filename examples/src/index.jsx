@@ -1,6 +1,5 @@
-import React from 'react';
 import { render } from 'react-dom';
-import InfiniteScrollImages from '../../src';
+import InfiniteScrollImages from '../../src/index.tsx';
 
 import example1 from './example1.jpg';
 import example2 from './example2.jpg';

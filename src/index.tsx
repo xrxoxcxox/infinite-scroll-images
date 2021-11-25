@@ -1,17 +1,21 @@
-import React, { useState } from 'react';
-import useDimensions from 'react-use-dimensions';
+import useDimensions from 'use-react-dimensions';
 
-/** @jsx jsx */
-import { jsx, css, keyframes } from '@emotion/react';
+import { css, keyframes } from '@emotion/react';
 
-const Scroll = ({ images, imageHeight, duration }) => {
-  const [ref, { width }] = useDimensions();
+interface Props {
+  images: any[]
+  imageHeight: any
+  duration: any
+}
+
+const Scroll = ({ images, imageHeight, duration }: Props) => {
+  const { ref, dimensions } = useDimensions<HTMLDivElement>({});
   const scroll = keyframes`
     0% {
       transform: translateX(0);
     }
     100% {
-      transform: translateX(-${width}px);
+      transform: translateX(-${dimensions.width}px);
     }
   `;
   const visibleArea = css`
@@ -28,7 +32,7 @@ const Scroll = ({ images, imageHeight, duration }) => {
   );
 };
 
-const InfiniteScrollImages = props => {
+const InfiniteScrollImages = (props: Props) => {
   const container = css`
     display: flex;
     flex-wrap: nowrap;
@@ -38,6 +42,7 @@ const InfiniteScrollImages = props => {
     <div css={container}>
       <Scroll {...props} />
       <Scroll {...props} />
+      <p>test</p>
     </div>
   );
 };
