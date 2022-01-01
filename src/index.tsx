@@ -1,14 +1,13 @@
 import useDimensions from 'use-react-dimensions';
-
 import { css, keyframes } from '@emotion/react';
 
 interface Props {
-  images: any[]
-  imageHeight: any
-  duration: any
+  images: string[]
+  imageHeight: number
+  duration: number
 }
 
-const Scroll = ({ images, imageHeight, duration }: Props) => {
+const Scroll = ({ images, imageHeight, duration }: Props): JSX.Element => {
   const { ref, dimensions } = useDimensions<HTMLDivElement>({});
   const scroll = keyframes`
     0% {
@@ -32,7 +31,7 @@ const Scroll = ({ images, imageHeight, duration }: Props) => {
   );
 };
 
-const InfiniteScrollImages = (props: Props) => {
+const InfiniteScrollImages = (props: Props): JSX.Element => {
   const container = css`
     display: flex;
     flex-wrap: nowrap;

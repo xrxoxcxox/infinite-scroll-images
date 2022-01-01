@@ -11,7 +11,7 @@ const images = [example1, example2, example3, example4, example5];
 
 const App = () => (
   <div style={{ width: 1080 }}>
-    <InfiniteScrollImages images={images} imageHeight="200" duration="10" />
+    <InfiniteScrollImages images={images} imageHeight={200} duration={10} />
   </div>
 );
 render(<App />, document.getElementById('root'));
