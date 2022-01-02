@@ -1,3 +1,4 @@
+import React from 'react'
 import useDimensions from 'use-react-dimensions'
 
 type Props = {
