@@ -1,13 +1,13 @@
-import useDimensions from 'use-react-dimensions';
+import useDimensions from 'use-react-dimensions'
 
 interface Props {
-  images: string[];
-  imageHeight: number;
-  duration: number;
+  images: string[]
+  imageHeight: number
+  duration: number
 }
 
 const Scroll = ({ images, imageHeight, duration }: Props): JSX.Element => {
-  const { ref, dimensions } = useDimensions<HTMLDivElement>({});
+  const { ref, dimensions } = useDimensions<HTMLDivElement>({})
   return (
     <>
       <style>
@@ -33,8 +33,8 @@ const Scroll = ({ images, imageHeight, duration }: Props): JSX.Element => {
         ))}
       </div>
     </>
-  );
-};
+  )
+}
 
 export const InfiniteScrollImages = (props: Props): JSX.Element => {
   return (
@@ -42,5 +42,5 @@ export const InfiniteScrollImages = (props: Props): JSX.Element => {
       <Scroll {...props} />
       <Scroll {...props} />
     </div>
-  );
-};
+  )
+}
