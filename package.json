@@ -1,24 +1,30 @@
 {
-  "name": "infinite-scroll-component",
-  "version": "1.0.0",
-  "description": "",
+  "name": "@xrxoxcxox/infinite-scroll-images",
+  "version": "0.1.0",
+  "description": "Infinite scrolling images",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "type": "module",
   "scripts": {
     "build": "rimraf dist && rollup -c",
     "build-storybook": "build-storybook",
-    "storybook": "start-storybook -p 6006"
+    "storybook": "start-storybook -p 6006",
+    "test": "exit 0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xrxoxcxox/infinite-scroll-component.git"
+    "url": "git+https://github.com/xrxoxcxox/infinite-scroll-images.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/xrxoxcxox/infinite-scroll-component/issues"
+    "url": "https://github.com/xrxoxcxox/infinite-scroll-images/issues"
   },
-  "homepage": "https://github.com/xrxoxcxox/infinite-scroll-component#readme",
+  "homepage": "https://github.com/xrxoxcxox/infinite-scroll-images#readme",
   "devDependencies": {
     "@babel/core": "^7.16.7",
     "@rollup/plugin-commonjs": "^21.0.1",

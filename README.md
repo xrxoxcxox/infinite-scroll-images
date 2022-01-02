@@ -1,1 +1,1 @@
-# infinite-scroll-component
+# infinite-scroll-images
