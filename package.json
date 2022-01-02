@@ -3,14 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "start": "webpack-dev-server --mode development",
-    "transpile": "babel src -d dist --copy-files",
-    "build": "webpack --mode production",
-    "deploy": "gh-pages -d examples/dist",
-    "publish-demo": "npm run build && npm run deploy",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/xrxoxcxox/infinite-scroll-component.git"
@@ -22,35 +15,18 @@
   },
   "homepage": "https://github.com/xrxoxcxox/infinite-scroll-component#readme",
   "devDependencies": {
-    "@babel/cli": "^7.16.0",
-    "@babel/core": "^7.16.7",
-    "@babel/preset-env": "^7.16.4",
-    "@babel/preset-react": "^7.16.7",
-    "@emotion/babel-plugin": "^11.3.0",
     "@emotion/react": "^11.6.0",
-    "@types/html-webpack-plugin": "^3.2.6",
     "@types/react": "^17.0.37",
     "@types/react-dom": "^17.0.11",
     "@typescript-eslint/eslint-plugin": "^5.8.1",
     "@typescript-eslint/parser": "^5.8.1",
-    "babel-loader": "^8.2.3",
-    "css-loader": "^6.5.1",
     "eslint": "^8.6.0",
     "eslint-plugin-react": "^7.28.0",
-    "gh-pages": "^2.1.1",
-    "html-webpack-plugin": "^5.5.0",
     "prettier": "^1.19.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-use-dimensions": "^1.2.1",
-    "style-loader": "^3.3.1",
-    "ts-loader": "^9.2.6",
     "typescript": "^4.5.2",
-    "url-loader": "^4.1.1",
-    "use-react-dimensions": "^2.0.1",
-    "webpack": "^5.64.2",
-    "webpack-cli": "^4.9.1",
-    "webpack-dev-server": "^4.5.0"
-  },
-  "dependencies": {}
+    "use-react-dimensions": "^2.0.1"
+  }
 }
