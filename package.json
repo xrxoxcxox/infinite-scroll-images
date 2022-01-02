@@ -1,56 +1,62 @@
 {
-  "name": "infinite-scroll-component",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "@xrxoxcxox/infinite-scroll-images",
+  "version": "0.1.0",
+  "description": "Infinite scrolling images",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
   "scripts": {
-    "start": "webpack-dev-server --mode development",
-    "transpile": "babel src -d dist --copy-files",
-    "build": "webpack --mode production",
-    "deploy": "gh-pages -d examples/dist",
-    "publish-demo": "npm run build && npm run deploy",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rimraf dist && rollup -c",
+    "build-storybook": "build-storybook",
+    "storybook": "start-storybook -p 6006",
+    "test": "exit 0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xrxoxcxox/infinite-scroll-component.git"
+    "url": "git+https://github.com/xrxoxcxox/infinite-scroll-images.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/xrxoxcxox/infinite-scroll-component/issues"
+    "url": "https://github.com/xrxoxcxox/infinite-scroll-images/issues"
   },
-  "homepage": "https://github.com/xrxoxcxox/infinite-scroll-component#readme",
+  "homepage": "https://github.com/xrxoxcxox/infinite-scroll-images#readme",
   "devDependencies": {
-    "@babel/cli": "^7.16.0",
     "@babel/core": "^7.16.7",
-    "@babel/preset-env": "^7.16.4",
-    "@babel/preset-react": "^7.16.7",
-    "@emotion/babel-plugin": "^11.3.0",
-    "@emotion/react": "^11.6.0",
-    "@types/html-webpack-plugin": "^3.2.6",
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-node-resolve": "^13.1.2",
+    "@rollup/plugin-typescript": "^8.3.0",
+    "@storybook/addon-actions": "^6.4.9",
+    "@storybook/addon-essentials": "^6.4.9",
+    "@storybook/addon-links": "^6.4.9",
+    "@storybook/react": "^6.4.9",
     "@types/react": "^17.0.37",
     "@types/react-dom": "^17.0.11",
     "@typescript-eslint/eslint-plugin": "^5.8.1",
     "@typescript-eslint/parser": "^5.8.1",
     "babel-loader": "^8.2.3",
-    "css-loader": "^6.5.1",
     "eslint": "^8.6.0",
     "eslint-plugin-react": "^7.28.0",
-    "gh-pages": "^2.1.1",
-    "html-webpack-plugin": "^5.5.0",
+    "eslint-plugin-storybook": "^0.5.5",
     "prettier": "^1.19.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-use-dimensions": "^1.2.1",
-    "style-loader": "^3.3.1",
-    "ts-loader": "^9.2.6",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.62.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-terser": "^7.0.2",
     "typescript": "^4.5.2",
-    "url-loader": "^4.1.1",
-    "use-react-dimensions": "^2.0.1",
-    "webpack": "^5.64.2",
-    "webpack-cli": "^4.9.1",
-    "webpack-dev-server": "^4.5.0"
+    "use-react-dimensions": "^2.0.1"
   },
-  "dependencies": {}
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "tslib": "^2.3.1",
+    "use-react-dimensions": "^2.0.1"
+  }
 }
