@@ -13,13 +13,13 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true,
   },
   "include": [
     "src/**/*"
   ],
   "exclude": [
-    "examples",
     "node_modules"
   ],
   "compileOnSave": false

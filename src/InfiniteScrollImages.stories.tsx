@@ -1,5 +1,5 @@
 import type { ComponentStory, ComponentMeta } from "@storybook/react"
-import { InfiniteScrollImages } from "./"
+import { InfiniteScrollImages } from "./InfiniteScrollImages"
 
 const image1 = 'https://picsum.photos/200?random=1'
 const image2 = 'https://picsum.photos/200?random=2'

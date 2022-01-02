@@ -1,6 +1,6 @@
 import useDimensions from 'use-react-dimensions'
 
-interface Props {
+type Props = {
   images: string[]
   imageHeight: number
   duration: number
