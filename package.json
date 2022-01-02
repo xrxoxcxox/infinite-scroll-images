@@ -19,7 +19,6 @@
   "homepage": "https://github.com/xrxoxcxox/infinite-scroll-component#readme",
   "devDependencies": {
     "@babel/core": "^7.16.7",
-    "@emotion/react": "^11.6.0",
     "@storybook/addon-actions": "^6.4.9",
     "@storybook/addon-essentials": "^6.4.9",
     "@storybook/addon-links": "^6.4.9",
